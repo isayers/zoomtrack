@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>ZoomStock</title>
+  
+  <!-- HTML -->
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <h1>Zoom<sub>Stock</sub><i class="fa-solid fa-lock"></i></h1> 
+  <div class="search">
+ <input type="text" placeholder="Enter ID To Track Items..." required name="" id="inp">
+ <button onclick="browse ()"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+  <!-- Project -->
+  <script>
+  
+ function browse()
+ {
+   document.body.innerHTML = '<iframe src="https://bit.ly//' + document.getElementById("inp").value + '" style="width:100%; min-height:600px"></iframe>'
+ }
+  </script>
+</body>
+</html>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image:url("https://luckies.co.uk/cdn/shop/files/lk-luksg2-01-grey_93931_2000x.jpg?v=1685531747");
+}
+.search{
+  position: relative;
+  bottom: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vw;
+  width: 90vw;
+  background:
+rgba( 255, 255, 255, 0.4 );
+backdrop-filter:
+blur( 4px );
+-webkit-backdrop-filter:
+blur( 4px );
+border:
+1px solid rgba( 255, 255, 255, 0.18 );
+  
+}
+.search input{
+  height: 13vw;
+  width: 73%;
+  margin: 2vw;
+  text-align: center;
+  font-size: 6vw;
+  border: 1vw solid #000;
+  background: #000;
+  color: #fff;
+  font-weight: 400;
+  outline: none;
+}
+.search button{
+  height: 13vw;
+  width: 13vw;
+  font-weight: 900;
+  margin: 2vw;
+  font-size: 6vw;
+  background: #000;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  transition: .5s;
+  outline: none;
+}
+.search button:hover{
+  background: #fff;
+  color: #000;
+}
+iframe
+{
+ position:fixed;
+ 
+ left:0px;
+ top:0px;
+ border:none;
+}
+h1{
+  text-align: center;
+  position: relative;
+  font-size: 14vw;
+  margin: 5vw;
+  color: #000000;
+  bottom: 20vw;
+
+}
+.search input::placeholder{
+  font-size: 5vw;
+}
+h1 i {
+  color: #000;
+}
+</style>
